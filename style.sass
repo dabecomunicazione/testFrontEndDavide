@@ -1,0 +1,117 @@
+$primary-color: red
+$secondary-color: #333
+
+/* General */
+*, body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Poppins', sans-serif
+
+.active
+  background: $primary-color
+  color: #fff
+  a
+    color: #fff!important
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+
+/* Header */
+header
+  height: 60px
+  display: flex
+  justify-content: space-between
+
+  a img
+    padding: 10px
+    max-height: 60px
+
+.navbar__menu ul
+  display: flex
+
+a
+  color: #333
+  text-decoration: none
+
+.navbar__menu li
+  display: inline-block
+  padding: 17px
+  text-transform: uppercase
+
+
+.navbar__menu li:hover,
+.navbar__menu a:hover,
+  background: $secondary-color
+  color: #fff
+  cursor: pointer
+
+/* Hero section */
+.hero
+  background: url('asset/img/hero.jpg') no-repeat top center / cover
+  height: 70vh
+
+  h1
+    color: #fff
+    font-size: 2.5rem
+    font-weight: 600
+    padding-top: 30vh
+    max-width: 900px
+
+  .button
+    background: $primary-color
+    width: 200px
+    padding: 10px
+    margin-top: 15px
+    a
+      display: block
+      text-align: center
+      color: #fff
+
+  .button:hover
+    background: $secondary-color
+
+/* Cards */
+.cards
+  display: flex
+  width: 100%
+  padding: 70px 0
+
+.cards-content
+  margin: 30px
+  img
+    width: 100%
+    height: auto
+
+.cards-content:first-child
+  margin-left: 0
+.cards-content:last-child
+  margin-right: 0
+
+.cards-text
+  text-align: center
+  padding-top: 20px
+  font-weight: 300
+
+/* Cta */
+.cta
+  height: 40vh
+  background: #ccc
+  padding: 70px 0
+
+.cta-text
+  text-align: center
+
+input
+     width: 375px
+     margin: 20px auto
+     height: 4rem
+     border: 3px solid $secondary-color
+     padding: 1rem
+     border-radius: 5px
+
+/* Footer */
+footer
+  background: #444
+  height: 100px
