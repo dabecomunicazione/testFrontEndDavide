@@ -1,4 +1,4 @@
-$primary-color: red
+$primary-color: #39f
 $secondary-color: #333
 
 /* General */
@@ -8,8 +8,8 @@ $secondary-color: #333
   box-sizing: border-box
   font-family: 'Poppins', sans-serif
 
-.active
-  background: $primary-color
+li.active
+  background: $primary-color !important
   color: #fff
   a
     color: #fff!important
@@ -37,8 +37,11 @@ a
 
 .navbar__menu li
   display: inline-block
-  padding: 17px
+  padding: 15px
   text-transform: uppercase
+  height: 60px
+  line-height: 30px
+
 
 
 .navbar__menu li:hover,
@@ -49,14 +52,14 @@ a
 
 /* Hero section */
 .hero
-  background: url('asset/img/hero.jpg') no-repeat top center / cover
-  height: 70vh
+  .title-hero
+    padding: 17em 1em 2em
 
   h1
     color: #fff
     font-size: 2.5rem
     font-weight: 600
-    padding-top: 30vh
+    // padding-top: 25vh
     max-width: 900px
 
   .button
@@ -83,6 +86,9 @@ a
   img
     width: 100%
     height: auto
+  .category
+    height: 0
+    visibility: hidden
 
 .cards-content:first-child
   margin-left: 0
@@ -104,7 +110,7 @@ a
   text-align: center
 
 input
-     width: 375px
+     width: 450px
      margin: 20px auto
      height: 4rem
      border: 3px solid $secondary-color
@@ -115,3 +121,96 @@ input
 footer
   background: #444
   height: 100px
+
+/* MediaQueries */
+$layout-breakpoint-small: 600px
+
+@media (max-width: $layout-breakpoint-small)
+  .container
+    max-width: 100%
+    margin: 0px
+
+  header
+    height: 225px
+    flex-direction: column
+    justify-content: flex-start
+    flex-direction: row
+    flex-wrap: wrap
+    a
+      margin: 0 auto
+      width: 100%
+      text-align: center
+  .navbar__menu
+    width: 100%
+    margin: 0 auto
+    ul
+      flex-direction: row
+      flex-wrap: wrap
+    a li
+      width: 100%
+      background: #ccc
+
+
+  .hero
+    h1
+      font-size: 1.5rem
+      margin: 20px
+
+    .title-hero
+      padding: 7em 1em 2em
+    .button
+      margin: 20px
+
+  .cards
+    flex-wrap: wrap
+  .cards-content
+    margin: 20px
+    .category
+      height: 40px
+      background: $primary-color
+      color: #fff
+      visibility: visible
+      margin: 0 auto
+      padding: 10px
+      width: 100px
+      text-align: center
+      text-transform: uppercase
+      font-size: .7rem
+      line-height: 20px
+      margin-top: -30px
+      position: relative
+  .cards-content:first-child
+    margin-left: 20px
+  .cards-content:last-child
+    margin-right: 20px
+  .cards-text
+    padding-bottom: 30px
+
+  .cta
+    padding: 50px
+  input
+    width: 100%
+    margin: 10px
+
+  footer
+    background: #fff
+    height: 60px
+
+.image-wrapper
+  position: relative
+  overflow: hidden
+  > *:not(.image-cover)
+    position: relative
+    z-index: 1
+
+.image-cover
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+  width: 100vw
+  height: 100%
+  object-fit: cover
+  z-index: 0
