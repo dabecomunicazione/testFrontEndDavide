@@ -1,3 +1,9 @@
+var customAlert = document.getElementById('myAlert')
+
 function myAlert(){
-  document.querySelector(".button").style.background = "red";
+  customAlert.style.display = 'block';
+}
+
+function hideAlert(){
+  customAlert.style.display = 'none';
 }
